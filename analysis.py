@@ -13,6 +13,7 @@ df['year'] = df['Date'].dt.year
 
 # Initialize Dash app
 app = Dash(__name__)
+server=app.server
 
 # Set a dark theme for the dashboard layout
 app.layout = html.Div(
