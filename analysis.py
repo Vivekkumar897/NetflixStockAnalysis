@@ -5,7 +5,10 @@ from plotly.subplots import make_subplots
 from dash import Dash, dcc, html, Input, Output
 
 # Load and preprocess data
+print("Attempting to load NFLX.csv...")
 df = pd.read_csv("NFLX.csv")
+print("Data loaded successfully:", df.head())
+
 df['Date'] = pd.to_datetime(df['Date'])
 df['day'] = df['Date'].dt.day
 df['month'] = df['Date'].dt.month
